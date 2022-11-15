@@ -4,3 +4,10 @@
     border: none;
     background-color: #76D7C4;
 }
+
+.swip-wrapper{
+    display: block;
+    width: 100%;
+    overflow-x: scroll ;
+    
+}

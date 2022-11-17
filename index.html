@@ -12,21 +12,23 @@
 </head>
 
 <body>
-
     <header>
-        <nav class="navbar navbar-expand-lg navbar-expand-md bg-white py-0 fixed-top">
+        <div class="top-navbar">
+          <nav class="navbar navbar-expand-lg navbar-expand-md bg-white py-0 fixed-top">
             <div class="container-fluid d-flex justify-content-lg-evenly py-1" style="background-color: #76D7C4 ;">
               <h1 class="px-0">
                 <a class="navbar-brand px-4 text-white fs-4 fw-bold me-md-5" href="#">SHEFA
                     <i class="fa-solid fa-hand-holding-medical text-white fw-semibold"></i>
                 </a>
               </h1>
-              <p class="text-white mb-0 justify-content-sm-center">Deliver to<br><span class="fw-bold">
-                <i class="fa-solid fa-location-dot"></i>Bangladesh</span> </p>
+              <div class="d-flex text-white">
+                <i class="fa-solid fa-location-dot pt-4 pe-1"></i>
+                <p class="text-white mb-0 justify-content-sm-center">Deliver to<br><span class="fw-bold d-flex">Bangladesh</span> </p>
+              </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse flex-row" id="navbarSupportedContent">
                 <form class="d-flex m-auto w-50" role="search">
                     <input class="form-control me-2 rounded-pill" type="search" placeholder="Search for medicine/health products" aria-label="Search">
                     <button class="btn rounded-pill bg-white" type="submit" style="color: grey;">Search</button>
@@ -37,19 +39,17 @@
                     <button class="signin mx-2 py-1">
                         <a href="" class="text-decoration-none text-white fs-5 fw-semibold">Login</a>
                     </button>
-                    <a href="" class="text-decoration-none ">
-                        <p class="mb-0 text-white fw-bold px-3 fs-6">
+                    <a href="" class="text-decoration-none">
+                        <span class="mb-0 text-white fw-bold px-3 fs-6 d-flex align-items-center">
                             <i class="fa-solid fa-cart-plus px-1"></i>Cart
-                        </p>
+                        </span>
                     </a>
-                        
               </div>
             </div>
           </nav>
-          <hr class="my-0 border-top-1 text-white">
-          <div class="container-fluid py-2 d-flex justify-content-between position-absolute" style="background-color: #76D7C4;">
+          <div class="container-fluid d-flex justify-content-between py-2" id="header-bottom" style="background-color:#2f3a38; position:fixed; display: block; top: 64px; transition: top 0.3s;">
             <div class="dropdown">
-                <a href="" class="text-decoration-none text-white px-4 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="" class="text-decoration-none text-white px-4 fw-semibold d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-bars pe-2"></i>Categories
                 </a>
                 <ul class="align-items-center dropdown-menu px-2" style="list-style: none; width: 250px;">
@@ -82,21 +82,23 @@
                     </li>
                 </ul>
             </div>
-            <a href="" class="text-decoration-none text-white fw-semibold">
+            <a href="" class="text-decoration-none text-white fw-semibold d-flex align-items-center">
                     <i class="fa-solid fa-phone pe-2"></i>Call to order
             </a>
-            <a href="" class="text-decoration-none text-white fw-semibold">
+            <a href="" class="text-decoration-none text-white fw-semibold d-flex align-items-center">
                     <i class="fa-solid fa-heart pe-2"></i>Healthcare products
             </a>
-            <a href="" class="text-decoration-none text-white fw-semibold px-3">
+            <a href="" class="text-decoration-none text-white fw-semibold px-3 d-flex align-items-center">
                     <i class="fa-solid fa-file-arrow-up pe-2"></i>Upload prescription
             </a>
           </div>
+        </div>
+      
     </header>
 
-    <main>
-        <section class="container py-4">
-            <h5 class="py-4">Covid-19 Special</h5>
+    <main class="mt-md-5 pt-md-3">
+        <section class="container py-4 mt-0">
+            <h5 class="py-4 mt-0">Covid-19 Special</h5>
             <div class="row gx-2 flex-nowrap swip-wrapper">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
@@ -611,7 +613,18 @@
 
     </footer>
 
-
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("header-bottom").style.top = "64px";
+        } else {
+          document.getElementById("header-bottom").style.top = "0";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

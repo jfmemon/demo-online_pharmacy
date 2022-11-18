@@ -44,17 +44,17 @@
                     <input class="form-control me-2 rounded-pill" type="search" placeholder="Search for medicine/health products" aria-label="Search">
                     <button class="btn rounded-pill bg-white" type="submit" style="color: grey;">Search</button>
                 </form>
-                    <button class="signup mx-2 py-1">
-                        <a href="" class="text-decoration-none text-white fs-5 fw-semibold">Sign Up</a>
-                    </button>
-                    <button class="signup mx-2 py-1">
-                        <a href="" class="text-decoration-none text-white fs-5 fw-semibold">Login</a>
-                    </button>
-                    <a href="" class="text-decoration-none">
-                        <span class="mb-0 text-white fw-bold px-3 fs-6 d-flex align-items-center">
-                            <i class="fa-solid fa-cart-plus px-1"></i>Cart
-                        </span>
-                    </a>
+                <button class="signup mx-2 py-1">
+                  <a href="" class="text-decoration-none text-white fs-5 fw-semibold"  data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+              </button>
+              <button class="signup mx-2 py-1">
+                  <a href="" class="text-decoration-none text-white fs-5 fw-semibold" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+              </button>
+              <a href="" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <span class="mb-0 text-white fw-bold px-3 fs-6 d-flex align-items-center">
+                      <i class="fa-solid fa-cart-plus px-1"></i>Cart
+                  </span>
+              </a>
               </div>
             </div>
           </nav>
@@ -260,6 +260,77 @@
         </div>
   
       </footer>
+
+      <!--Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name:</label>
+          <input type="name" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Phone number:</label>
+          <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="+880">
+        </div>
+      </div>
+      <small class="text-center"><a href="">Have a referel code?</a></small>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Log In</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Phone number:</label>
+          <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="+880">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Please login first</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Phone number:</label>
+          <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="+880">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
   
       <script>
         var prevScrollpos = window.pageYOffset;

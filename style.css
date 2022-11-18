@@ -10,3 +10,9 @@
     width: 100%;
     overflow-x: scroll ;
 }
+
+.covid19-swip-wrapper{
+    display: block;
+    width: 100%;
+    overflow-wrap: normal;
+}

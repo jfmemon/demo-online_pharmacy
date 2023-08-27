@@ -1,1 +1,1 @@
-https://jfmemon.github.io/Online_pharmacy/
+https://jfmemon.github.io/demo-online_pharmacy/
